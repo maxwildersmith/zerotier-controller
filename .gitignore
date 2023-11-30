@@ -7,7 +7,7 @@ __pycache__/
 *.pickle
 
 # beyond existing, constants should not be pushed
-# constants.py
+constants.py
 
 # C extensions
 *.so
