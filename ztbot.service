@@ -1,0 +1,11 @@
+[Unit]
+Description=Runs the ZeroTier Controller bot which interacts with various chat services
+
+[Service]
+User=root
+WorkingDirectory=/home/<user>/zerotier-controller/
+ExecStart=/bin/bash -c 'cd /home/<user>/zerotier-controller/ && python main.py'
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
