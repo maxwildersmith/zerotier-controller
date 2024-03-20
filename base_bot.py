@@ -17,6 +17,10 @@ class Bot():
         """
         global names
 
+        # Check that we have the required API keys
+        if CONTROLLER_TOKEN == "YOUR TOKEN HERE" or NODEID == "YOUR NODE ID HERE" or NWID == "YOUR NETWORK ID HERE":
+            raise ValueError("Please replace the placeholder API keys in constants.py with your own")
+
         self.token = CONTROLLER_TOKEN
         self.nwid = NWID
         self.nodeid = NODEID
@@ -108,7 +112,7 @@ class Bot():
             net_info[network] = info
         return net_info
 
-    def member_info(self, member: str) -> str:
+    def get_member_info(self, member: str) -> str:
         """
         Returns a string with the member info of the member with the given UID
         """
